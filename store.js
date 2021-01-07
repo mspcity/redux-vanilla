@@ -26,3 +26,5 @@ const reducer = (state=initialState, action) => {
 //store
 
 //subscribe - view - dispatch
+
+//comment 
