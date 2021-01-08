@@ -27,4 +27,4 @@ const reducer = (state=initialState, action) => {
 
 //subscribe - view - dispatch
 
-//comment 
+//comments
