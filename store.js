@@ -27,9 +27,13 @@ const reducer = (state=initialState, action) => {
 const store = createStore(reducer);
 
 //subscribe - view - dispatch
-
-console.log(store.getState())
+store.subscribe(() => {
+  console.log('subscribe ==>>', store.getState())
+})
 
 store.dispatch(addSubscriber());
-console.log(store.getState())
+store.dispatch(addSubscriber());
+store.dispatch(addSubscriber());
+store.dispatch(addSubscriber());
+store.dispatch(addSubscriber());
 
