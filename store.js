@@ -1,5 +1,5 @@
 const redux = require('redux');
-console.log(redux)
+const createStore = redux.createStore;
 
 // actions
 //action-types
@@ -24,7 +24,8 @@ const reducer = (state=initialState, action) => {
   }
 }
 //store
+const store = createStore(reducer);
 
 //subscribe - view - dispatch
 
-//comments
+console.log(store.getState())
