@@ -1,6 +1,7 @@
 const redux = require('redux');
-const reduxLogger = require = require('redux-logger')
+const reduxLogger = require('redux-logger')
 const createStore = redux.createStore;
+const applyMiddleware = redux.applyMiddleware;
 const logger = reduxLogger.createLogger();
 
 // actions
@@ -26,7 +27,7 @@ const reducer = (state=initialState, action) => {
   }
 }
 //store
-const store = createStore(reducer);
+const store = createStore(reducer, applyMiddleware(logger));
 
 //subscribe - view - dispatch
 store.subscribe(() => {
