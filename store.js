@@ -13,10 +13,10 @@ const addSubscriber = () => {
   }
 }
 // reducers
-const initialState = {
+const subscriberState = {
   subscribers : 365
 }
-const reducer = (state=initialState, action) => {
+const subscriberReducer = (state=subscriberState, action) => {
   switch(action.type){
     case ADD_SUBSCRIBER:
       return {
@@ -27,12 +27,12 @@ const reducer = (state=initialState, action) => {
   }
 }
 //store
-const store = createStore(reducer, applyMiddleware(logger));
+const store = createStore(subscriberReducer, applyMiddleware(logger));
 
 //subscribe - view - dispatch
-store.subscribe(() => {
-  console.log('subscribe ==>>', store.getState())
-})
+// store.subscribe(() => {
+//   console.log('subscribe ==>>', store.getState())
+// })
 
 store.dispatch(addSubscriber());
 store.dispatch(addSubscriber());
