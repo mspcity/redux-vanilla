@@ -3,6 +3,7 @@ const reduxLogger = require('redux-logger')
 const createStore = redux.createStore;
 const applyMiddleware = redux.applyMiddleware;
 const logger = reduxLogger.createLogger();
+const combineReducers = redux.combineReducers;
 
 // actions
 //action-types
@@ -43,10 +44,16 @@ const viewReducer = (state=viewState, action) => {
         ...state,
         viewCount: state.viewCount + 1;
       }
+      default: return state;
   }
 }
+
+const rootReducer = combineReducers({
+  view: viewReducer,
+  subscriber: subscriberReducer,
+})
 //store
-const store = createStore(subscriberReducer, applyMiddleware(logger));
+const store = createStore(rootReducer, applyMiddleware(logger));
 
 //subscribe - view - dispatch
 // store.subscribe(() => {
