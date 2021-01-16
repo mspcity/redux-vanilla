@@ -36,5 +36,4 @@ store.dispatch(addSubscriber());
 store.dispatch(addSubscriber());
 store.dispatch(addSubscriber());
 store.dispatch(addSubscriber());
-store.dispatch(addSubscriber());
 
