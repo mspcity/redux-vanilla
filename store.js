@@ -42,7 +42,7 @@ const viewReducer = (state=viewState, action) => {
     case ADD_VIEWCOUNT:
       return {
         ...state,
-        viewCount: state.viewCount + 1;
+        viewCount: state.viewCount + 1
       }
       default: return state;
   }
@@ -65,4 +65,6 @@ store.dispatch(addSubscriber());
 store.dispatch(addSubscriber());
 store.dispatch(addSubscriber());
 store.dispatch(addSubscriber());
+store.dispatch(addViewCount());
+store.dispatch(addViewCount());
 
