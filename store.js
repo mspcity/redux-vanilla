@@ -1,5 +1,7 @@
 const redux = require('redux');
+const reduxLogger = require = require('redux-logger')
 const createStore = redux.createStore;
+const logger = reduxLogger.createLogger();
 
 // actions
 //action-types
