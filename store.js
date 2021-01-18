@@ -67,4 +67,5 @@ store.dispatch(addSubscriber());
 store.dispatch(addSubscriber());
 store.dispatch(addViewCount());
 store.dispatch(addViewCount());
+store.dispatch(addViewCount());
 
